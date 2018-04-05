@@ -16,7 +16,8 @@ var config = {
 firebase.initializeApp(config);
 let name = '';
 
-var server = express();
+//var server = express();
+var server = restify.createServer();
 
 server.use(bodyParser.urlencoded({
     extended: true
