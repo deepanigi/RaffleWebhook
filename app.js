@@ -25,7 +25,7 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
-server.listen((process.env.PORT || 8000), function () {
+server.listen((process.env.PORT || 3978), function () {
   console.log("Server is up and running...");
 });
 
