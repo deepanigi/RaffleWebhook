@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const Request = require("request");
 var firebase = require("firebase");
-
+var restify = require('restify');
 //firebase.initializeApp(config);
 var config = {
   apiKey: "AIzaSyBeCkanUegQwCzrNeUEm22cSJ3SNV2-IQI",
@@ -16,7 +16,7 @@ var config = {
 firebase.initializeApp(config);
 let name = '';
 
-const server = express();
+var server = express();
 
 server.use(bodyParser.urlencoded({
     extended: true
@@ -24,6 +24,9 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
+server.listen((process.env.PORT || 8000), function () {
+  console.log("Server is up and running...");
+});
 
 server.post('/getwinner', function (req, res) {
 
@@ -106,6 +109,3 @@ db_list.once('value', function(snapshot) {
 
 });
 
-server.listen((process.env.PORT || 8000), function () {
-    console.log("Server is up and running...");
-});
