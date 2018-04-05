@@ -4,6 +4,8 @@ var http = require('http');
 var Request = require("request");
 var firebase = require("firebase");
 var restify = require('restify');
+var port = process.env.PORT || 8080;
+
 //firebase.initializeApp(config);
 var config = {
   apiKey: "AIzaSyBeCkanUegQwCzrNeUEm22cSJ3SNV2-IQI",
@@ -25,7 +27,7 @@ var server = restify.createServer();
 
 // server.use(bodyParser.json());
 
-server.listen((process.env.PORT || 3978), function () {
+server.listen(port, function () {
   console.log("Server is up and running...");
 });
 
