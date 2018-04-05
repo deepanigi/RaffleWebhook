@@ -1,7 +1,7 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const http = require('http');
-const Request = require("request");
+var express = require('express');
+var bodyParser = require('body-parser');
+var http = require('http');
+var Request = require("request");
 var firebase = require("firebase");
 var restify = require('restify');
 //firebase.initializeApp(config);
