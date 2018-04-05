@@ -19,11 +19,11 @@ let name = '';
 //var server = express();
 var server = restify.createServer();
 
-server.use(bodyParser.urlencoded({
-    extended: true
-}));
+// server.use(bodyParser.urlencoded({
+//     extended: true
+// }));
 
-server.use(bodyParser.json());
+// server.use(bodyParser.json());
 
 server.listen((process.env.PORT || 3978), function () {
   console.log("Server is up and running...");
